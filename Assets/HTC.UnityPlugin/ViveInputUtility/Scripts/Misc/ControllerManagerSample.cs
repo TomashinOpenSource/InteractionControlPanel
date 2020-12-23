@@ -118,7 +118,7 @@ public class ControllerManagerSample : MonoBehaviour
     {
         if (ChangeProp.Set(ref m_rightLaserPointerActive, value))
         {
-            if (value) { m_rightCurvePointerActive = false; m_rightCustomModelActive = false; }
+            //if (value) { m_rightCurvePointerActive = false; m_rightCustomModelActive = false; }
             return true;
         }
         return false;
@@ -148,7 +148,7 @@ public class ControllerManagerSample : MonoBehaviour
     {
         if (ChangeProp.Set(ref m_leftLaserPointerActive, value))
         {
-            if (value) { m_leftCurvePointerActive = false; m_leftCustomModelActive = false; }
+            //if (value) { m_leftCurvePointerActive = false; m_leftCustomModelActive = false; }
             return true;
         }
         return false;
@@ -195,11 +195,11 @@ public class ControllerManagerSample : MonoBehaviour
 
     protected virtual void Start()
     {
-        m_rightLaserPointerActive = false;
-        m_rightCustomModelActive = false;
+        m_rightLaserPointerActive = true;
+        m_rightCustomModelActive = true;
         m_rightCurvePointerActive = false;
-        m_leftLaserPointerActive = false;
-        m_leftCustomModelActive = false;
+        m_leftLaserPointerActive = true;
+        m_leftCustomModelActive = true;
         m_leftCurvePointerActive = false;
 
         UpdateActivity();
@@ -274,7 +274,7 @@ public class ControllerManagerSample : MonoBehaviour
                 }
                 break;
         }
-
+        /*
         switch (customModelActiveMode)
         {
             case CustomModelActiveModeEnum.None:
@@ -300,6 +300,7 @@ public class ControllerManagerSample : MonoBehaviour
                 }
                 break;
         }
+        */
 
         if (needUpdate) { UpdateActivity(); }
     }
@@ -437,7 +438,7 @@ public class ControllerManagerSample : MonoBehaviour
         var rightCustomModelShouldActive = m_rightCustomModelActive;
         var rightLaserPointerShouldActive = m_rightLaserPointerActive;
         var rightCurvePointerShouldActive = m_rightCurvePointerActive;
-        var rightGrabberShouldActive = !m_rightLaserPointerActive && !m_rightCustomModelActive && !m_rightCurvePointerActive;
+        var rightGrabberShouldActive = !m_rightLaserPointerActive && !m_rightCustomModelActive && !m_rightCurvePointerActive || true;
 
         if (rightRenderModel != null && rightRenderModel.activeSelf != rightRenderModelShouldActive)
         {
@@ -469,7 +470,7 @@ public class ControllerManagerSample : MonoBehaviour
         var leftCustomModelShouldActive = m_leftCustomModelActive;
         var leftLaserPointerShouldActive = m_leftLaserPointerActive;
         var leftCurvePointerShouldActive = m_leftCurvePointerActive;
-        var leftGrabberShouldActive = !m_leftLaserPointerActive && !m_leftCustomModelActive && !m_leftCurvePointerActive;
+        var leftGrabberShouldActive = !m_leftLaserPointerActive && !m_leftCustomModelActive && !m_leftCurvePointerActive || true;
 
         if (leftRenderModel != null && leftRenderModel.activeSelf != leftRenderModelShouldActive)
         {

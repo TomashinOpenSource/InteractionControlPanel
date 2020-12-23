@@ -1,0 +1,32 @@
+{
+	"Panels":
+	[
+		{
+			"Name": "Место",
+			"Buttons":
+			[
+				{ "Name": "Пляж", "Text": "Пляж", "isLocked": "true", "isCorrect": "false" },
+				{ "Name": "Дом", "Text": "Дом", "isLocked": "false", "isCorrect": "false" },
+				{ "Name": "Банк", "Text": "Банк", "isLocked": "false", "isCorrect": "false" },
+				{ "Name": "Ангар", "Text": "Ангар", "isLocked": "false", "isCorrect": "true" }
+			]
+		},
+		{
+			"Name": "Тип кран-балки",
+			"Buttons":
+			[
+				{ "Name": "Неправильная", "Text": "Неправильная", "isLocked": "false", "isCorrect": "false" },
+				{ "Name": "Правильная", "Text": "Правильная", "isLocked": "false", "isCorrect": "true" }
+			]
+		},
+		{
+			"Name": "Тип груза",
+			"Buttons":
+			[
+				{ "Name": "Смотри дальше", "Text": "Смотри дальше", "isLocked": "false", "isCorrect": "false" },
+				{ "Name": "Стул", "Text": "Стул", "isLocked": "false", "isCorrect": "false" },
+				{ "Name": "Труба", "Text": "Труба", "isLocked": "false", "isCorrect": "true" }
+			]
+		}
+	]
+}
